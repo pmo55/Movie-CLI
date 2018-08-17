@@ -1,0 +1,4 @@
+#!/use/bin/env ruby
+require './lib/Movie'
+
+
