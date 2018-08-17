@@ -1,4 +1,4 @@
 #!/use/bin/env ruby
-require './lib/Movie'
+require "./lib/Movie/cli.rb"
 
-
+Cli.new.start
