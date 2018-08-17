@@ -6,6 +6,6 @@ class MovieScraper
   def get_page
     doc = Nokogiri::HTML(open("https://www.rottentomatoes.com/browse/in-theaters/"))
   end
-  
+  binding.pry
 
 end
