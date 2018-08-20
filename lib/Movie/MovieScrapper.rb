@@ -8,7 +8,7 @@ class MovieScraper
       binding.pry
   end
   def get_movies
-    self.get_page.search("h3").text
+
   end
 end
 MovieScraper.new.get_page
