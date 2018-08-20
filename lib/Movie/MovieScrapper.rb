@@ -14,3 +14,4 @@ end
 MovieScraper.new.get_page
 
 
+# doc.css("div div div a").text.squeeze
