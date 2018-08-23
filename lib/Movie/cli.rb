@@ -21,9 +21,14 @@ class Cli
     while input != "exit"
     puts "please enter the corresponding number to the left of the movie for more info, or type in exit to leave application"
     input=gets.strip
-    puts @movies[input.to_i-1].title
-    puts @movies[input.to_i-1].studio
-    puts @movies[input.to_i-1].total_box_office
+    if input.to_i >0 && input.to_i <=10
+    puts  "Movie Title: #{@movies[input.to_i-1].title}"
+    puts "Movie Studio: #{@movies[input.to_i-1].studio}"
+    puts "Total Box Office: #{@movies[input.to_i-1].total_box_office}"
+    elsif input=="exit"
+    puts "Thank you, and have a nice day!"
+  else puts "That is not a valid entry"
   end
+end
 end
 end
