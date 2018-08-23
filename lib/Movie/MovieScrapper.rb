@@ -8,11 +8,11 @@ class MovieScraper
    doc_2 = Nokogiri::HTML(open("https://www.businessinsider.com/highest-grossing-movies-all-time-worldwide-box-office-2018-4"))
    doc_2.css(".slide").each do |movies|
      movie=Movie.new
-     movie.title = movies.css(".slide-title-text").text.squeeze.strip
+     movie.title = movies.css(".slide-title-text").text
      movie.total_box_office = movies.css("p").text.gsub("Global box office: ","").squeeze.gsub(" bilion"," billion")
      movie.studio = movies.css(".image-source").text.squeeze
     end
-      binding.pry
+      #binding.pry
   end
 end
 MovieScraper.new.get_movies
