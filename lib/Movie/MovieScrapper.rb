@@ -17,6 +17,7 @@ class MovieScraper
 end
 MovieScraper.new.get_movies
 
+
 # doc.css("div div div a").text.squeeze
 # doc_2.css(".slide").children.css("p").first.text=> "Global box office: $1.341 billion "
 # doc_2.css(".slide") => Title, studio, box office

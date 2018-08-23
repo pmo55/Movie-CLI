@@ -9,8 +9,8 @@ class Cli
   end
   def list_movies
     puts "Top 10 box office movies of all time:"
-    Movie.all.each.with_index do |movie, i|
-      puts movie.title
+    Movie.all.each.with_index(1) do |movie, i|
+      puts  "#{i}. #{movie.title}"
     end
   end
   def menu
