@@ -23,8 +23,8 @@ class Cli
     input=gets.strip
     if input.to_i >0 && input.to_i <=10
     puts  "Movie Title: #{@movies[input.to_i-1].title}"
-    puts "Movie Studio: #{@movies[input.to_i-1].studio}"
     puts "Total Box Office: #{@movies[input.to_i-1].total_box_office}"
+    puts "Movie Studio: #{@movies[input.to_i-1].studio}"
     elsif input=="exit"
     puts "Thank you, and have a nice day!"
   else puts "That is not a valid entry"

@@ -10,9 +10,9 @@ class MovieScraper
      movie=Movie.new
      movie.title = movies.css(".slide-title-text").text.gsub(/\A[012345678910]../,"")
      movie.total_box_office = movies.css("p").text.gsub("Global box office: ","").squeeze.gsub(" bilion"," billion")
-     movie.studio = movies.css(".image-source").text.squeeze
+     movie.studio = movies.css(".image-source").text.gsub("Courtesy of ","").squeeze
     end
-      #binding.pry
+      binding.pry
   end
 end
 MovieScraper.new.get_movies
