@@ -1,5 +1,5 @@
 class Movie
-  attr_accessor :release_date, :title
+  attr_accessor :release_date, :title, :studio, :total_box_office
   
 @@all=[]
   
