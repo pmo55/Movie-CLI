@@ -5,7 +5,7 @@ class Cli
 
   def start
     list_movies
-  
+    menu
   end
   def list_movies
     puts "Top 10 box office movies of all time:"
@@ -14,9 +14,10 @@ class Cli
     end
   end
   def menu
+    input= nil
     puts "please enter the corresponding number to the left of the movie for more info, or type in exit to leave application"
     input=gets.strip
-    while input !=exit
+    while input != "exit"
     Movie.all.each do |movie|
       if movie.title.include?(input)
         puts "Total box office sales: #{movie.total_box_office}"
@@ -27,4 +28,4 @@ class Cli
   end
   end
 end
-
+end
