@@ -1,8 +1,7 @@
 class Movie
   attr_accessor :release_date, :title, :studio, :total_box_office
-  
-@@all=[]
-  
+
+  @@all=[]
   def initialize
     @@all << self
   end
@@ -12,5 +11,4 @@ class Movie
   def self.reset_all
     @@all.clear
   end
-  
 end
