@@ -1,4 +1,4 @@
 #!/use/bin/env ruby
-require "./lib/Movie/cli.rb"
+require_relative "../lib/MovieList.rb"
 
 Cli.new.start
