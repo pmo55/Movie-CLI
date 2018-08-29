@@ -1,6 +1,6 @@
-
 class MovieScraper
   def get_movies
+    doc= Nokogiri::HTML(open("https://www.the-numbers.com/box-office-records/worldwide/all-movies/cumulative/all-time"))
     doc_2 = Nokogiri::HTML(open("https://www.businessinsider.com/highest-grossing-movies-all-time-worldwide-box-office-2018-4"))
     doc_2.css(".slide").each do |movies|
      movie=Movie.new
@@ -10,6 +10,3 @@ class MovieScraper
     end
   end
 end
-
-
-

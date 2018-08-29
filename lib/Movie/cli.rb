@@ -1,6 +1,4 @@
-
 class Cli
-
   def start
     MovieScraper.new.get_movies
     list_movies
