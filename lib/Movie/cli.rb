@@ -3,6 +3,7 @@ class Cli
     MovieScraper.new.get_movies
     list_movies
     menu
+    MovieScraper.new.get_lineage_stats
   end
   
   def list_movies
